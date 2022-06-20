@@ -42,7 +42,8 @@ dd01a3507 Update CHANGELOG.md
 5)
 По умолчанию выдано 2 CPU и 1024 MB RAM
 
-6)Необходимо изменить конфиг файл vagrantfile
+6)
+Необходимо изменить конфиг файл vagrantfile
 v.memory = ~
 v.cpus = ~
 
@@ -59,11 +60,8 @@ touch {1..100000}
 Выводит 0 или 1
 12)
 mkdir /tmp/new_path_directory 
-
 cp /bin/bash /tmp/new_path_directory/
- 
 PATH=/tmp/new_path_directory/bash:$PATH
-
 echo $PATH
 
 type -a bash
