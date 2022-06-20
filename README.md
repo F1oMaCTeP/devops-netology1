@@ -9,20 +9,24 @@
 Будет игнорироваться файл с наименованием crash.log
 
 # 2.4 Инструменты Git
-1)
+1)Найдите полный хеш и комментарий коммита, хеш которого начинается на aefea
+
 aefead2207ef7e2aa5dc81a34aedf0cad4c32545
+
 commit - Update CHANGELOG.md
 
-2)
+2)Какому тегу соответствует коммит 85024d3?
+
 TAG - tag: v0.12.23
 
-3)
-2
+3)Сколько родителей у коммита b8d720? Напишите их хеши.
+
 56cd7859e05c36c06b56d013b55a252d0bb7e158
 
 9ea88f22fc6269854151c571162c5bcf958bee2b
 
-4)
+4)Перечислите хеши и комментарии всех коммитов которые были сделаны между тегами v0.12.23 и v0.12.24.
+
 3ff1c03b (tag: v0.12.24) v0.12.24
 
 b14b74c49 [Website] vmc provider links
@@ -43,10 +47,12 @@ dd01a3507 Update CHANGELOG.md
 
 225466bc3 Cleanup after v0.12.23 release
 
-5)
+5)Найдите коммит в котором была создана функция func providerSource, ее определение в коде выглядит так func providerSource(...) (вместо троеточего перечислены аргументы).
+
 8c928e835
 
-6)
+6)Найдите все коммиты в которых была изменена функция globalPluginDirs.
+
 78b122055 Remove config.go and update things using its aliases
 
 52dbf9483 keep .terraform.d/plugins for discovery
@@ -57,7 +63,8 @@ dd01a3507 Update CHANGELOG.md
 
 8364383c3 Push plugin discovery down into command package
 
-7)
+7)Кто автор функции synchronizedWriters?
+
 5ac311e2a - Martin Atkins mart@degeneration.co.uk
 
 # Домашнее задание к занятию "3.1. Работа в терминале, лекция 1"
