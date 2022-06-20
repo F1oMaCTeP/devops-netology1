@@ -38,15 +38,12 @@ dd01a3507 Update CHANGELOG.md
 5ac311e2a - Martin Atkins mart@degeneration.co.uk
 
 # Домашнее задание к занятию "3.1. Работа в терминале, лекция 1"
-
 5)
 По умолчанию выдано 2 CPU и 1024 MB RAM
-
 6)
 Необходимо изменить конфиг файл vagrantfile
 v.memory = ~
 v.cpus = ~
-
 8)
 HISTSIZE - 862 строкa
 HISTFILESIZE - 846 строкa
