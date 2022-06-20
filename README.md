@@ -5,7 +5,7 @@
 Будут игнорироваться все файлы с наименованием *.tfstate*
 Будет игнорироваться файл с наименованием crash.log
 
-2.4 Инструменты Git
+# 2.4 Инструменты Git
 1)
 aefead2207ef7e2aa5dc81a34aedf0cad4c32545
 commit - Update CHANGELOG.md
@@ -45,6 +45,7 @@ dd01a3507 Update CHANGELOG.md
 6)Необходимо изменить конфиг файл vagrantfile
 v.memory = ~
 v.cpus = ~
+
 8)
 HISTSIZE - 862 строкa
 HISTFILESIZE - 846 строкa
