@@ -36,3 +36,36 @@ dd01a3507 Update CHANGELOG.md
 8364383c3 Push plugin discovery down into command package
 7)
 5ac311e2a - Martin Atkins mart@degeneration.co.uk
+
+омашнее задание к занятию "3.1. Работа в терминале, лекция 1"
+
+5)
+По умолчанию выдано 2 CPU и 1024 MB RAM
+
+6)Необходимо изменить конфиг файл vagrantfile
+v.memory = ~
+v.cpus = ~
+8)
+HISTSIZE - 862 строкa
+HISTFILESIZE - 846 строкa
+ignorespace и ignoredups, в истории не будут сохранятся команды, совпадающие с предыдущей, а также начинающиеся на пробел.
+9)
+Строка 257, когда список должен будет выполнять в текущем контексте интерпретатора
+10)
+touch {1..100000}
+300000 не получится - Argument list too long
+11)
+Выводит 0 или 1
+12)
+mkdir /tmp/new_path_directory 
+
+cp /bin/bash /tmp/new_path_directory/
+ 
+PATH=/tmp/new_path_directory/bash:$PATH
+
+echo $PATH
+
+type -a bash
+13)
+Команда at используется для назначения одноразового задания на заданное время, а команда batch — для назначения одноразовых задач, которые должны выполняться, когда загрузка системы становится меньше 1.5.
+
