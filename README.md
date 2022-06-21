@@ -92,6 +92,8 @@ touch {1..100000}
 11)
 Выводит 0 или 1
 
+Вернётся 0 так как директория /tmp существует, echo $~ вернёт [[ -d /tmp ]]
+
 12)
 mkdir /tmp/new_path_directory 
 cp /bin/bash /tmp/new_path_directory/
