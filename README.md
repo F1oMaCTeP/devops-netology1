@@ -235,8 +235,11 @@ Part of the utsname information is also accessible via /proc/sys/kernel/{ostype,
 
 
 +    is in the foreground process group
+        
 N    low-priority (nice to other users)
+        
 s    is a session leader
+        
 <   high-priority (not nice to other users)
 
 # Домашнее задание к занятию "3.4. Операционные системы, лекция 2"
