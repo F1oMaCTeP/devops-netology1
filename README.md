@@ -219,13 +219,13 @@ Part of the utsname information is also accessible via /proc/sys/kernel/{ostype,
 
 9)Используя -o stat для ps, определите, какой наиболее часто встречающийся статус у процессов в системе. В man ps ознакомьтесь (/PROCESS STATE CODES) что значат дополнительные к основной заглавной буквы статуса процессов. Его можно не учитывать при расчете (считать S, Ss или Ssl равнозначными).
 
-10 I
-55 I<
-1 R+
-38 S
-3 S+
-2 SN
-1 STAT
+ 10 I
+ 55 I<
+ 1 R+
+ 38 S
+ 3 S+
+ 2 SN
+ 1 STAT
 
 
 +    is in the foreground process group
