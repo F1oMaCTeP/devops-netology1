@@ -255,7 +255,11 @@ unit-файл
    Memory: 6.4M
    CGroup: /system.slice/node_exporter.service
            └─2317 /usr/local/bin/node_exporter
-
+ 
+ systemctl enabled node_exporter
+ После ребута все запускается. 
+ 
+ 
 2)Ознакомьтесь с опциями node_exporter и выводом /metrics по-умолчанию. Приведите несколько опций, которые вы бы выбрали для базового мониторинга хоста по CPU, памяти, диску и сети
 
  CPU
