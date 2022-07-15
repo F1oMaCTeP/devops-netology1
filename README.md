@@ -247,17 +247,80 @@ s    is a session leader
 1)Используя знания из лекции по systemd, создайте самостоятельно простой unit-файл для node_exporter
 unit-файл
 
-
+● node_exporter.service - Prometheus Node Exporter
+   Loaded: loaded (/etc/systemd/system/node_exporter.service; enabled; vendor preset: disabled)
+   Active: active (running) since Fri 2022-07-15 11:01:41 MSK; 2min 22s ago
+ Main PID: 2317 (node_exporter)
+    Tasks: 4 (limit: 10926)
+   Memory: 6.4M
+   CGroup: /system.slice/node_exporter.service
+           └─2317 /usr/local/bin/node_exporter
 
 2)Ознакомьтесь с опциями node_exporter и выводом /metrics по-умолчанию. Приведите несколько опций, которые вы бы выбрали для базового мониторинга хоста по CPU, памяти, диску и сети
 
+ CPU 
+ node_cpu_seconds_total{cpu="0",mode="system"}
+ node_cpu_seconds_total{cpu="0",mode="idle"}
+ process_cpu_seconds_total
+ RAM
+ node_memory_Buffers_bytes
+ node_memory_MemAvailable_bytes
+ node_memory_MemFree_bytes
+ Disc
+ node_disk_io_time_seconds_total{device="~~~"}
+ node_disk_read_time_seconds_total{device="sda"}
+ node_disk_write_time_seconds_total{device="sda"}
+ node_filesystem_avail_bytes
+ Network
+ node_network_transmit_bytes_total
+ node_network_transmit_errs_total
+ node_network_info
+
 3)Установите в свою виртуальную машину Netdata
+
+ ● netdata.service - Real time performance monitoring
+   Loaded: loaded (/usr/lib/systemd/system/netdata.service; enabled; vendor pre>
+   Active: active (running) since Fri 2022-07-15 11:15:38 MSK; 24s ago
+  Process: 32581 ExecStartPre=/bin/chown -R netdata:netdata /var/run/netdata (c>
+  Process: 32579 ExecStartPre=/bin/mkdir -p /var/run/netdata (code=exited, stat>
+  Process: 32577 ExecStartPre=/bin/chown -R netdata:netdata /var/cache/netdata >
+  Process: 32575 ExecStartPre=/bin/mkdir -p /var/cache/netdata (code=exited, st>
+ Main PID: 32583 (netdata)
+    Tasks: 55 (limit: 10926)
+   Memory: 158.4M
+   CGroup: /system.slice/netdata.service
+           ├─32583 /usr/sbin/netdata -P /var/run/netdata/netdata.pid -D
+           ├─32586 /usr/sbin/netdata --special-spawn-server
+           ├─32733 /usr/libexec/netdata/plugins.d/apps.plugin 1
+           ├─32734 /usr/libexec/netdata/plugins.d/ebpf.plugin 1
+           └─32736 /usr/libexec/netdata/plugins.d/go.d.plugin 1
+
 
 4)Можно ли по выводу dmesg понять, осознает ли ОС, что загружена не на настоящем оборудовании, а на системе виртуализации?
 
+ dmesg | grep -i virtual
+
 5)Как настроен sysctl fs.nr_open на системе по-умолчанию?
+
+ 1048576
 
 6)Запустите любой долгоживущий процесс (не ls, который отработает мгновенно, а, например, sleep 1h) в отдельном неймспейсе процессов; покажите, что ваш процесс работает под PID 1 через nsenter.
 
+ root       33105  0.0  0.0   7308   936 pts/1    S+   11:19   0:00 unshare -f --pid --mount-proc sleep 1h
+ root       33106  0.0  0.0   7316   840 pts/1    S+   11:19   0:00 sleep 1h
+ root       33170  0.0  0.0  12144  1168 pts/2    S+   11:20   0:00 grep --color=auto sleep
+
+ nsenter --target 33106 --pid --mount
+
+ ps aux
+
+ USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+ root           1  0.0  0.0   7316   840 pts/1    S+   11:19   0:00 sleep 1h
+ root           2  0.0  0.3  26248  4004 pts/2    S    11:21   0:00 -bash
+ root          26  0.0  0.2  58756  3972 pts/2    R+   11:22   0:00 ps aux
+
 7)Найдите информацию о том, что такое :(){ :|:& };:.
 
+:(){ :|: & };: – форк-бомба
+
+В этой короткой строке определена функция командной оболочки, которая создает свои собственные копии. Процесс постоянно воспроизводит себя, и его копии постоянно размножаться, быстро занимая все свое процессорное время и всю память. Это может привести к остановке компьютера. Это, в большей степени, атака вида denial-of-service (отказ в обслуживании).
