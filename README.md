@@ -487,3 +487,42 @@ OPTIONS="--collector.textfile.directory /var/lib/node_exporter/textfile_collecto
 20)Погасите тестовый хост, vagrant destroy.
  
  ![image](https://user-images.githubusercontent.com/106802398/179576426-6ae1cd27-3be5-4c75-8012-43649659f8fb.png)
+
+ # Домашнее задание к занятию "3.6. Компьютерные сети, лекция 1"
+ 
+1)Работа c HTTP через телнет.
+ 
+ ![image](https://user-images.githubusercontent.com/106802398/179578298-2c0a9acc-66a0-49f7-ae3b-84177cb3e93f.png)
+
+2)Повторите задание 1 в браузере, используя консоль разработчика F12.
+ 
+ HTTP 307 Internal Redirect
+ 
+ Oзначает, что ресурс был временно перемещён в URL, указанный в Location (https://stackoverflow.com/). При этом для перенаправленного запроса тело и метод запроса не 
+ будут изменены.
+ 
+ ![image](https://user-images.githubusercontent.com/106802398/179579442-22ff102f-e520-4096-bceb-837ac1fc1c83.png)
+
+3)Какой IP адрес у вас в интернете?
+ 
+ 185.177.125.211
+ 
+4)Какому провайдеру принадлежит ваш IP адрес? Какой автономной системе AS? Воспользуйтесь утилитой whois
+ 
+ ![image](https://user-images.githubusercontent.com/106802398/179579803-a700c328-2513-4142-8d89-cefa05b1fc78.png)
+
+5)Через какие сети проходит пакет, отправленный с вашего компьютера на адрес 8.8.8.8? Через какие AS? Воспользуйтесь утилитой traceroute
+ 
+ ![image](https://user-images.githubusercontent.com/106802398/179580160-3e61be35-fd8a-419e-bddd-2d36bc09863f.png)
+
+6)Повторите задание 5 в утилите mtr. На каком участке наибольшая задержка - delay?
+ 
+ ![image](https://user-images.githubusercontent.com/106802398/179580761-398b2fdd-0c1e-4219-b97a-c51a3834b18a.png)
+
+7)Какие DNS сервера отвечают за доменное имя dns.google? Какие A записи? воспользуйтесь утилитой dig
+ 
+ ![image](https://user-images.githubusercontent.com/106802398/179580995-ccd4d923-38e8-44be-ac45-fce418b6fba0.png)
+
+8)Проверьте PTR записи для IP адресов из задания 7. Какое доменное имя привязано к IP? воспользуйтесь утилитой dig
+ 
+ ![image](https://user-images.githubusercontent.com/106802398/179581121-020e6d13-c853-4f0d-a1fa-1b90961f8e31.png)
