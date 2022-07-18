@@ -420,5 +420,70 @@ OPTIONS="--collector.textfile.directory /var/lib/node_exporter/textfile_collecto
 
 ![image](https://user-images.githubusercontent.com/106802398/179572696-a0a634de-da32-4d7e-87eb-5db068b42a6a.png)
 
-4)Используя fdisk, разбейте первый диск на 2 раздела: 2 Гб, оставшееся пространство.
+ 4)Используя fdisk, разбейте первый диск на 2 раздела: 2 Гб, оставшееся пространство.
 
+![image](https://user-images.githubusercontent.com/106802398/179573313-d2b09e71-4811-403a-bfd6-c1bdbb22a322.png)
+
+5)Используя sfdisk, перенесите данную таблицу разделов на второй диск.
+ 
+![image](https://user-images.githubusercontent.com/106802398/179573508-de2a7ff4-a2f5-4bd3-98c8-2633434eaef0.png)
+
+6)Соберите mdadm RAID1 на паре разделов 2 Гб.
+ 
+ ![image](https://user-images.githubusercontent.com/106802398/179573768-b99ec4df-5d4d-459a-871a-f164fc09dd73.png)
+
+7)Соберите mdadm RAID0 на второй паре маленьких разделов
+ 
+ ![image](https://user-images.githubusercontent.com/106802398/179573919-3e522aa6-0046-4b5b-9163-89b74ccf8d6d.png)
+
+8)Создайте 2 независимых PV на получившихся md-устройствах.
+ 
+ ![image](https://user-images.githubusercontent.com/106802398/179574095-350979fc-43a4-4a58-a0ae-b3a165035a82.png)
+ 
+9)Создайте общую volume-group на этих двух PV.
+ 
+ ![image](https://user-images.githubusercontent.com/106802398/179574378-7157be6f-e303-44d6-aee1-3314a107700f.png)
+ 
+10)Создайте LV размером 100 Мб, указав его расположение на PV с RAID0.
+ 
+ ![image](https://user-images.githubusercontent.com/106802398/179574543-0150dd3b-485c-414b-bb89-9fa697d333ed.png)
+ 
+11)Создайте mkfs.ext4 ФС на получившемся LV.
+ 
+ ![image](https://user-images.githubusercontent.com/106802398/179574642-b205def0-fea4-4ca0-914c-df5429dca2fe.png)
+
+12)Смонтируйте этот раздел в любую директорию, например, /tmp/new.
+ 
+ ![image](https://user-images.githubusercontent.com/106802398/179574839-bdb10448-be73-40c3-a700-9105b3535d0d.png)
+
+13)Поместите туда тестовый файл, например wget https://mirror.yandex.ru/ubuntu/ls-lR.gz -O /tmp/new/test.gz.
+ 
+ ![image](https://user-images.githubusercontent.com/106802398/179575068-a618b738-f7c5-4edc-9113-0257d1dc6f71.png)
+
+14)Прикрепите вывод lsblk.
+
+ ![image](https://user-images.githubusercontent.com/106802398/179575173-f6e920b2-cb2e-4c36-9f3f-fd03b201aac8.png)
+
+15)Протестируйте целостность файла
+
+![image](https://user-images.githubusercontent.com/106802398/179575501-1911b7cb-5ca6-430f-af04-c45da15282ba.png)
+
+16)Используя pvmove, переместите содержимое PV с RAID0 на RAID1.
+ 
+ ![image](https://user-images.githubusercontent.com/106802398/179575720-7a86b4bf-be54-4005-b1ce-9d0b2aca5140.png)
+
+17)Сделайте --fail на устройство в вашем RAID1 md.
+ 
+ ![image](https://user-images.githubusercontent.com/106802398/179575843-f6f9ab1b-d3c8-4a8b-aecc-5344098aab94.png)
+
+18)Подтвердите выводом dmesg, что RAID1 работает в деградированном состоянии.
+ 
+ ![image](https://user-images.githubusercontent.com/106802398/179576122-255d1a13-2457-4456-9838-8c132a1b0528.png)
+
+19)Протестируйте целостность файла, несмотря на "сбойный" диск он должен продолжать быть доступен
+ 
+ ![image](https://user-images.githubusercontent.com/106802398/179576245-c304ec58-30f1-49cd-a4ee-319375c5cb52.png)
+
+20)Погасите тестовый хост, vagrant destroy.
+ 
+ ![image](https://user-images.githubusercontent.com/106802398/179576426-6ae1cd27-3be5-4c75-8012-43649659f8fb.png)
