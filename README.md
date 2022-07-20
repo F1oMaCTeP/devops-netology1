@@ -654,3 +654,31 @@ bonds:
 Linux зависит от дестрибутива - ip neighbour show, arp a, ip neighbour del [ip address] dev [interface], ip neighbour flush all.
 
 Windows arp -a, arp -d [ip address], arp -d *
+
+# Домашнее задание к занятию "3.8. Компьютерные сети, лекция 3"
+ 
+1)Подключитесь к публичному маршрутизатору в интернет. Найдите маршрут к вашему публичному IP
+ 
+ ![image](https://user-images.githubusercontent.com/106802398/180043543-9b62a1dd-5f2a-47c7-9097-87313b046534.png)
+
+2)Создайте dummy0 интерфейс в Ubuntu. Добавьте несколько статических маршрутов. Проверьте таблицу маршрутизации.
+ 
+ ![image](https://user-images.githubusercontent.com/106802398/180051034-8a94bb71-8e77-4a48-b970-d9e09948545f.png)
+
+3)Проверьте открытые TCP порты в Ubuntu, какие протоколы и приложения используют эти порты? Приведите несколько примеров.
+ 
+ ![image](https://user-images.githubusercontent.com/106802398/180048194-3e929426-49ff-4884-bbce-f86771734223.png)
+
+ SSH = 22
+ 
+ TELNET = 23
+ 
+ HTTP = 80
+ 
+4)Проверьте используемые UDP сокеты в Ubuntu, какие протоколы и приложения используют эти порты?
+ 
+ ![image](https://user-images.githubusercontent.com/106802398/180048504-46e2db1c-5092-4b0d-8d11-5bf3c751f851.png)
+
+5)Используя diagrams.net, создайте L3 диаграмму вашей домашней сети или любой другой сети, с которой вы работали.
+ 
+ https://drive.google.com/file/d/1xEUxKhrBJEB6lcqqN1NomIC7a4S3Zvw-/view?usp=sharing
