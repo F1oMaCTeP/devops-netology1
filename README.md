@@ -144,11 +144,11 @@ vagrant@vagrant:~$ cat omg
 
 omg test1
 
-vagrant@vagrant:~$ cat omg1
+cat omg1
 
-vagrant@vagrant:~$ cat <omg >omg1
+cat <omg >omg1
 
-vagrant@vagrant:~$ cat omg1
+cat omg1
 
 omg test1
 
