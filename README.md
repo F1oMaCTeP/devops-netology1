@@ -146,7 +146,7 @@ omg test1
 
 vagrant@vagrant:~$ cat omg1
 
-vagrant@vagrant:~$ cat <omg >omg1
+vagrant@vagrant:~$ cat < omg > omg1
 
 vagrant@vagrant:~$ cat omg1
 
