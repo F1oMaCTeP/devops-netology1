@@ -140,14 +140,17 @@ ls /root 2>/dev/pts/~
 
 5)Получится ли одновременно передать команде файл на stdin и вывести ее stdout в другой файл? Приведите работающий пример.
 
-cat omg
-omg
-test1
-cat omg1
-cat <omg >omg1
-cat omg1
-omg
-test1
+vagrant@vagrant:~$ cat omg
+
+omg test1
+
+vagrant@vagrant:~$ cat omg1
+
+vagrant@vagrant:~$ cat <omg >omg1
+
+vagrant@vagrant:~$ cat omg1
+
+omg test1
 
 
 6)Получится ли находясь в графическом режиме, вывести данные из PTY в какой-либо из эмуляторов TTY? Сможете ли вы наблюдать выводимые данные?
