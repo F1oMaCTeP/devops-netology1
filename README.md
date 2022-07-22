@@ -140,7 +140,7 @@ ls /root 2>/dev/pts/~
 
 5)Получится ли одновременно передать команде файл на stdin и вывести ее stdout в другой файл? Приведите работающий пример.
 
-vagrant@vagrant:~$ cat omg
+cat omg
 
 omg test1
 
