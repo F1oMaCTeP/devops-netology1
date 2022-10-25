@@ -33,7 +33,7 @@ Hey, Netology
 ```
 Опубликуйте созданный форк в своем репозитории и предоставьте ответ в виде ссылки на https://hub.docker.com/username_repo.
 
-
+![image](https://user-images.githubusercontent.com/106802398/197764532-a17e2ebd-ccdb-4a54-8df0-acc930619dc8.png)
 
 https://hub.docker.com/r/f1omactep/neotology-docker
 
