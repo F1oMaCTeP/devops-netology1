@@ -29,3 +29,9 @@ SSH инфраструктура
 - Ansible
 
 *Приложить вывод команд установленных версий каждой из программ, оформленный в markdown.*
+
+![image](https://user-images.githubusercontent.com/106802398/197515614-47eab5e6-c915-407c-a6af-0a06d0599bc3.png)
+
+![image](https://user-images.githubusercontent.com/106802398/197515839-e06b2c2b-2aff-4e7e-b732-658478f0900a.png)
+
+![image](https://user-images.githubusercontent.com/106802398/197516042-930faeec-fb44-46d2-b9d5-0d0564842ad2.png)
