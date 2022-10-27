@@ -38,3 +38,6 @@ docker node ls
 docker service ls
 ```
 ![image](https://user-images.githubusercontent.com/106802398/198277709-06393681-d68d-47eb-a87c-16bc00d696ba.png)
+
+
+![image](https://user-images.githubusercontent.com/106802398/198283962-8f609dae-abd1-469f-ba88-6b2397199191.png)
