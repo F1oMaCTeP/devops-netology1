@@ -17,7 +17,7 @@
 docker node ls
 ```
 
-
+![image](https://user-images.githubusercontent.com/106802398/198275285-366bd4fe-dd30-4c2d-aba8-d449d0c50fbf.png)
 
 ## Задача 3
 
