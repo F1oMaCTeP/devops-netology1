@@ -27,7 +27,7 @@ mysql-mysql-1       "docker-entrypoint.s…"   mysql               running      
 восстановитесь из него.
 ```bash
 vagrant@ubuntu-20:~/docker/mysql$ docker exec -it mysql-mysql-1 bash
-root@ba1c76c7ad6a:/# mysql -u root -p test_db < /data/backup/mysql/test_dump.sql
+root@131c76c7ds6a:/# mysql -u root -p test_db < /data/backup/mysql/test_dump.sql
 Enter password:
 ```
 Перейдите в управляющую консоль `mysql` внутри контейнера.
