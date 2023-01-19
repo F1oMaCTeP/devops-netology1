@@ -1,0 +1,13 @@
+---
+clickhouse:
+  hosts:
+    clickhouse-01:
+     ansible_host: 10.255.3.146
+     ansible_user: root
+     ansible_password: vagrant
+vector:
+  hosts:
+    vector-01:
+     ansible_host: 192.168.174.85
+     ansible_user: root
+     ansible_password: vagrant
