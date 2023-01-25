@@ -1,0 +1,4 @@
+---
+- include_tasks: Download_packages.yml.yml
+- include_tasks: Apply_template.yml
+- include_tasks: systemd_unit.yml
