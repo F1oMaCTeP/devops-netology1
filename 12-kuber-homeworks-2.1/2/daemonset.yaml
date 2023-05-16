@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: my-daemonset
+spec:
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      hostPID: true
+      containers:
+      - name: multitool
+        image: praqma/network-multitool
+        volumeMounts:
+        - name: syslog
+          mountPath: /var/log/
+          readOnly: true
+      volumes:
+      - name: syslog
+        hostPath:
+          path: /var/lib/docker/containers
