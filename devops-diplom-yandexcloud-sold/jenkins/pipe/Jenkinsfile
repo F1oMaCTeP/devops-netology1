@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    dockerimagename = "f1omactep/neotology-docker"
+    dockerimagename = "f1omactep/nginxapptest"
     dockerImage = ""
 
   }
