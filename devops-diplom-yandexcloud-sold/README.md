@@ -151,6 +151,7 @@
 
 ![](diplom/Jenkins.PNG)
 
+![](diplom/pipe1.PNG)
 
 ---
 ## Что необходимо для сдачи задания?

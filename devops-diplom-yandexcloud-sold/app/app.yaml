@@ -17,7 +17,7 @@ spec:
         app: app-web
     spec:
       containers:
-        - image: f1omactep/nginxapptest:1.0
+        - image: f1omactep/nginxapptest:gitTag
           imagePullPolicy: IfNotPresent
           name: app-web
       terminationGracePeriodSeconds: 30
