@@ -151,7 +151,12 @@
 
 ![](diplom/Jenkins.PNG)
 
+![](diplom/webhook.PNG)
+
 ![](diplom/pipe1.PNG)
+
+pipline который будет выполнять последний пункт нашего задания.
+- [Pipe](jenkins/pipe/Jenkinsfile)
 
 ---
 ## Что необходимо для сдачи задания?
